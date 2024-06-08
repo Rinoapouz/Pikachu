@@ -1,3 +1,5 @@
+import time
+
 import disnake
 from disnake.ext import commands
 from commands.commands_user import commands_user
@@ -27,9 +29,6 @@ async def on_ready():
 # Überprüft, ob der Bot einem unbekannten Server beitritt, wenn ja = verlassen
 @bot.event
 async def on_guild_join(guild):
-    if guild.id not in allowed_server_ids:
-        await guild.leave()
-        print(f"Left server [{guild.name}] [ID: {guild.id}] | Server Owner: [{guild.owner}]")
     if guild.id not in allowed_server_ids:
         await guild.leave()
         print(f"Left server [{guild.name}] [ID: {guild.id}] | Server Owner: [{guild.owner}]")
