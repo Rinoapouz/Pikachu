@@ -39,4 +39,5 @@ async def on_guild_join(guild):
 commands_admin(bot)
 commands_user(bot)
 
+
 bot.run("MTE3NTAwNTgyODc5Nzk2ODQwNQ.GTXkVh.34N-dTa3pbTzZd__qStYTYHhPvPZ7xJQNBQpy8")
