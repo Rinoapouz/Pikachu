@@ -1,9 +1,8 @@
 import time
-
 import disnake
 from disnake.ext import commands
-from commands.commands_user import commands_user
-from commands.commands_admin import commands_admin
+from commands.user import commands_user
+from commands.admin import commands_admin
 
 # Liste der erlaubten Server-IDs
 allowed_server_ids = [1248558780195799041, 808816437363343380]
