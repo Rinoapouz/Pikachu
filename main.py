@@ -30,6 +30,7 @@ async def on_guild_join(guild):
 # Importiere und registriere die Kommandos
 commands_admin(bot)
 commands_user(bot)
+print("hello world")
 
 
 bot.run("MTE3NTAwNTgyODc5Nzk2ODQwNQ.Gmo5Ba.YTtyY-lXY9lBGnjTIXmu-ZbNmn2UuDXeSaow0A")
