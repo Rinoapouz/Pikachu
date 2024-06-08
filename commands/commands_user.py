@@ -3,7 +3,7 @@ import disnake
 from disnake.ext import commands
 
 
-def commands_user_(bot):
+def commands_user(bot):
 
     @bot.command(name="commands")
     async def _commands(ctx) -> None:

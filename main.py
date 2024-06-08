@@ -1,7 +1,7 @@
 import disnake
 from disnake.ext import commands
-from Dosy.commands.commands_user import commands_user
-from Dosy.commands.commands_admin import commands_admin
+from commands.commands_user import commands_user
+from commands.commands_admin import commands_admin
 # Definiere eine Liste der erlaubten Server-IDs
 allowed_server_ids = [1248558780195799041, 808816437363343380]
 
@@ -28,7 +28,8 @@ async def on_guild_join(guild):
         print(f"Left server [{guild.name}] [ID: {guild.id}] | Server Owner: [{guild.owner}]")
 
 # Importiere und registriere die Kommandos
-commands_user(bot)
 commands_admin(bot)
+commands_user(bot)
+
 
 bot.run("MTE3NTAwNTgyODc5Nzk2ODQwNQ.Gmo5Ba.YTtyY-lXY9lBGnjTIXmu-ZbNmn2UuDXeSaow0A")
