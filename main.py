@@ -1,16 +1,28 @@
 import time
 import disnake
 from disnake.ext import commands
-from commands.user import commands_user
-from commands.admin import commands_admin
+
+from commands.help import *
+
+from commands.admin.ban import *
+from commands.admin.clear import *
+from commands.admin.kick import *
+from commands.admin.nuke import *
+from commands.admin.server_info import *
 
 # Liste der erlaubten Server-IDs
 allowed_server_ids = [1248558780195799041, 808816437363343380]
 
+# Liste der commands
+admin_commands = [ban, clear, kick, nuke, server_info]
+client_commands = [help]
+
+
 # Prefix wurde bestimmt (Standard /)
 bot = commands.Bot(
     command_prefix="ari",
-    intents=disnake.Intents.all()
+    intents=disnake.Intents.all(),
+    help_command=None
 )
 
 
@@ -33,9 +45,12 @@ async def on_guild_join(guild):
         print(f"Left server [{guild.name}] [ID: {guild.id}] | Server Owner: [{guild.owner}]")
 
 
-# Importiere und registriere die Kommandos
-commands_admin(bot)
-commands_user(bot)
+# Registrier commands
+for command in normale_commands:
+    command(bot)
+
+for command in admin_commands:
+    command(bot)
 
 
 bot.run("MTE3NTAwNTgyODc5Nzk2ODQwNQ.GTXkVh.34N-dTa3pbTzZd__qStYTYHhPvPZ7xJQNBQpy8")

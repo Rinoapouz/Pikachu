@@ -13,13 +13,3 @@
     ;   :  .'       \   \ .'    `--'---'     :  \  \        |   :   /     \   \ .'       '---'      
     |   ,.'          `---`                    \  ' ;        |   | ,'       `---`                    
     '---'                                      `--`         `----'
-
-VERISION v1.0.0
-    
-    Added:
-        Moderation Commands: Kick, Ban, Clear, Nuke, server_info
-
-        User Commands: commands, first
-    
-    Removed:
-        /
