@@ -2,6 +2,7 @@ import disnake
 from disnake.ext import commands
 from commands.commands_user import commands_user
 from commands.commands_admin import commands_admin
+
 # Definiere eine Liste der erlaubten Server-IDs
 allowed_server_ids = [1248558780195799041, 808816437363343380]
 
@@ -9,6 +10,7 @@ bot = commands.Bot(
     command_prefix="ari",
     intents=disnake.Intents.all()
 )
+
 
 # Zeigt in der CMD mit welchem BOT angemeldet ist
 @bot.event
@@ -20,6 +22,7 @@ async def on_ready():
             await guild.leave()
             print(f"Left server [{guild.name}] [ID: {guild.id}] | Server Owner: [{guild.owner}]")
 
+
 # Überprüfe, ob der Bot einem Server beitritt
 @bot.event
 async def on_guild_join(guild):
@@ -27,10 +30,9 @@ async def on_guild_join(guild):
         await guild.leave()
         print(f"Left server [{guild.name}] [ID: {guild.id}] | Server Owner: [{guild.owner}]")
 
+
 # Importiere und registriere die Kommandos
 commands_admin(bot)
 commands_user(bot)
-print("hello world")
-
 
 bot.run("MTE3NTAwNTgyODc5Nzk2ODQwNQ.Gmo5Ba.YTtyY-lXY9lBGnjTIXmu-ZbNmn2UuDXeSaow0A")
