@@ -15,7 +15,7 @@ allowed_server_ids = [1248558780195799041, 808816437363343380]
 
 # Liste der commands
 admin_commands = [ban, clear, kick, nuke, server_info]
-client_commands = [help]
+client_commands = [hilfe]
 
 
 # Prefix wurde bestimmt (Standard /)
@@ -46,7 +46,7 @@ async def on_guild_join(guild):
 
 
 # Registrier commands
-for command in normale_commands:
+for command in client_commands:
     command(bot)
 
 for command in admin_commands:

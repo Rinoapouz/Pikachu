@@ -1,7 +1,4 @@
-import time
-import disnake
-from disnake.ext import commands
-from permissions.administrator import *
+from permissions.permissions import *
 
 
 def nuke(bot):
