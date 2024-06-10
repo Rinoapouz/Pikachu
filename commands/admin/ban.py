@@ -1,5 +1,4 @@
 from permissions.permissions import *
-from images import *
 import disnake
 from disnake.ext import commands
 
