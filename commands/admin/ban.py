@@ -1,4 +1,6 @@
 from permissions.permissions import *
+import disnake
+from disnake.ext import commands
 
 
 def ban(bot):
@@ -11,15 +13,35 @@ def ban(bot):
             await ctx.send("Du kannst dich nicht selbst bannen, tut mir leid! :)")
             return
         await ctx.guild.ban(member, reason=reason)
-        await ctx.send(f"{member} wurde für {reason} gebannt.")
+
+        embed = disnake.Embed(
+            title="The banhammer slained a user",
+            color=disnake.Color.red()
+        )
+        embed.set_thumbnail(url=member.avatar.url)
+
+        embed.add_field(name="User", value=f"{member}", inline=True)
+        embed.add_field(name="Reason", value=f"{reason}", inline=True)
+        embed.add_field(name="length", value=f"permanent", inline=True)
+        await ctx.send(embed=embed)
 
     @has_administrator_role()
     @bot.command(
         name="ban",
-        description="Ban a user",)
+        description="Ban a user", )
     async def ariban(ctx, member: disnake.Member, *, reason: str = "Kein Grund angegeben") -> None:
         if member.id == ctx.author.id:
             await ctx.send("Du kannst dich nicht selbst bannen, tut mir leid! :)")
             return
         await ctx.guild.ban(member, reason=reason)
-        await ctx.send(f"{member} wurde für {reason} gebannt.")
+
+        embed = disnake.Embed(
+            title="The banhammer slained a user",
+            color=disnake.Color.red()
+        )
+        embed.set_thumbnail(url=member.avatar.url)
+
+        embed.add_field(name="User", value=f"{member}", inline=True)
+        embed.add_field(name="Reason", value=f"{reason}", inline=True)
+        embed.add_field(name="Length", value=f"permanent", inline=True)
+        await ctx.send(embed=embed)
