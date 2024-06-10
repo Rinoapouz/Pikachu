@@ -2,6 +2,7 @@ from permissions.permissions import *
 import disnake
 from disnake.ext import commands
 
+
 def clear(bot):
     @has_administrator_role()
     @bot.slash_command(

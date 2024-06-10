@@ -7,10 +7,25 @@ def ban(bot):
     @has_administrator_role()
     @bot.slash_command(
         name="ban",
-        description="Ban a user")
+        description="Ban a user",
+        options=[
+            disnake.Option(
+                name="member",
+                description="The member to ban",
+                type=disnake.OptionType.user,
+                required=True
+            ),
+            disnake.Option(
+                name="reason",
+                description="The reason for the ban",
+                type=disnake.OptionType.string,
+                required=False,
+            )
+        ]
+    )
     async def slashban(ctx, member: disnake.Member, *, reason: str = "Kein Grund angegeben") -> None:
         if member.id == ctx.author.id:
-            await ctx.send("Du kannst dich nicht selbst bannen, tut mir leid! :)")
+            await ctx.send("You can't ban yourself, idiot! :)")
             return
         await ctx.guild.ban(member, reason=reason)
 
@@ -28,13 +43,27 @@ def ban(bot):
     @has_administrator_role()
     @bot.command(
         name="ban",
-        description="Ban a user", )
+        description="Ban a user",
+        options=[
+            disnake.Option(
+                name="member",
+                description="The member to ban",
+                type=disnake.OptionType.user,
+                required=True
+            ),
+            disnake.Option(
+                name="reason",
+                description="The reason for the ban",
+                type=disnake.OptionType.string,
+                required=False,
+            )
+        ]
+    )
     async def ariban(ctx, member: disnake.Member, *, reason: str = "Kein Grund angegeben") -> None:
         if member.id == ctx.author.id:
             await ctx.send("Du kannst dich nicht selbst bannen, tut mir leid! :)")
             return
         await ctx.guild.ban(member, reason=reason)
-
         embed = disnake.Embed(
             title="The banhammer slained a user",
             color=disnake.Color.red()

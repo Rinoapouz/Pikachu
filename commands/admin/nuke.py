@@ -15,6 +15,5 @@ def nuke(bot):
     @bot.command(
         name="nuke",
         description="Clear the channel")
-
     async def arinuke(ctx) -> None:
         await ctx.channel.purge()

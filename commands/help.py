@@ -18,7 +18,7 @@ help = """```
 def hilfe(bot):
     @bot.slash_command(
         name="help",
-        description="Shows all commands")
+        description="Show all commands")
     async def slashhelp(ctx) -> None:
         await ctx.send("""```
         DOSY BOT COMMANDS
