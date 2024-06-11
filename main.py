@@ -11,7 +11,7 @@ from commands.admin.nuke import *
 from commands.admin.server_info import *
 
 # Liste der erlaubten Server-IDs
-allowed_server_ids = [1248558780195799041, 808816437363343380]
+allowed_server_ids = [1249777678798688349, 808816437363343380, 1181705883416285184]
 
 # Liste der commands
 admin_commands = [ban, clear, kick, nuke, server_info]
