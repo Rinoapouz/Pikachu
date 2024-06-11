@@ -2,47 +2,83 @@ import time
 import disnake
 from disnake.ext import commands
 
-help = """```
-        DOSY BOT COMMANDS
-
-    1. aricommands - shows you this menu
-
-    ADMIN COMMANDS
-    3. ariclear [number] - Clear a certain number of messages
-    4. arinuke - Nukes the Channel
-
-    99. server_info - test
-            ```"""
-
 
 def hilfe(bot):
     @bot.slash_command(
         name="help",
         description="Show all commands")
     async def slashhelp(ctx) -> None:
-        await ctx.send("""```
-        DOSY BOT COMMANDS
+        embed = disnake.Embed(
+            title="HERE ARE ALL THE COMMANDS",
+            description="The Golden Cat uses **ari** as a command prefix. **slash** will also work",
+            color=disnake.Color.yellow()
+        )
 
-    1. aricommands - shows you this menu
+        embed.add_field(
+            name="Default",
+            value="""```
+/help
 
-    ADMIN COMMANDS
-    3. ariclear [number] - Clear a certain number of messages
-    4. arinuke - Nukes the Channel
+                ```""",
+            inline=True
+        )
 
-    99. server_info - test
-            ```""")
+        embed.add_field(
+            name="information",
+            value="""```
+soon...
+                ```""",
+            inline=True
+        )
+
+        embed.add_field(
+            name="Administrator",
+            value="""```
+/ban
+/kick
+/clear
+/nuke
+                ```""",
+            inline=True
+        )
+
+        await ctx.send(embed=embed)
 
     @bot.command(
         name="help")
     async def arihelp(ctx) -> None:
-        await ctx.send("""```
-            DOSY BOT COMMANDS
+        embed = disnake.Embed(
+            title="HERE ARE ALL THE COMMANDS",
+            description="The Golden Cat uses **ari** as a command prefix. **slash** will also work",
+            color=disnake.Color.yellow()
+        )
 
-        1. aricommands - shows you this menu
+        embed.add_field(
+            name="Default",
+            value="""```
+/help
 
-        ADMIN COMMANDS
-        3. ariclear [number] - Clear a certain number of messages
-        4. arinuke - Nukes the Channel
+                ```""",
+            inline=True
+        )
 
-        99. server_info - test
-                ```""")
+        embed.add_field(
+            name="information",
+            value="""```
+soon...
+                ```""",
+            inline=True
+        )
+
+        embed.add_field(
+            name="Administrator",
+            value="""```
+/ban
+/kick
+/clear
+/nuke
+                ```""",
+            inline=True
+        )
+
+        await ctx.send(embed=embed)
