@@ -12,7 +12,7 @@ def nuke(bot):
         await ctx.channel.purge()
 
         embed = disnake.Embed(
-            title=f"The Channel has been nuked.",
+            title=f"The channel has been nuked.",
             color=disnake.Color.red()
         )
         await ctx.send(embed=embed)
@@ -25,7 +25,7 @@ def nuke(bot):
         await ctx.channel.purge()
 
         embed = disnake.Embed(
-            title=f"The Channel has been nuked.",
+            title=f"The channel has been nuked.",
             color=disnake.Color.red()
         )
         await ctx.send(embed=embed)
