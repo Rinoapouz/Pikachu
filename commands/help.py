@@ -18,7 +18,7 @@ def hilfe(bot):
             name="🔗 Default",
             value="""```
 /help
-
+/level
                 ```""",
             inline=True
         )

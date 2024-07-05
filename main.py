@@ -16,17 +16,18 @@ user_commands = [hilfe, level]
 # Liste der Addons
 addons = [Leveling]
 
-# Prefix bestimmen = ari, disnake help commands deaktiviert
+
+# Bot Einstellungen
 bot = commands.Bot(
     command_prefix="ari",
     intents=disnake.Intents.all(),
-    help_command=None
+    help_command=None,
+    activity=disnake.Game(name="/help")
 )
 
 @bot.event
 async def on_ready():
     print(f"Der Bot ist nun an! | username = {bot.user}")
-
 
 # Commands registrieren
 for command in user_commands:
