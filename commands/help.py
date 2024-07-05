@@ -9,13 +9,13 @@ def hilfe(bot):
         description="Show all commands")
     async def slashhelp(ctx) -> None:
         embed = disnake.Embed(
-            title="HERE ARE ALL THE COMMANDS",
-            description="The Golden Cat uses **ari** as a command prefix. **slash** will also work",
+            title="ᓚᘏᗢ",
+            description="The Golden Cat can hear you with the prefix **/**""",
             color=disnake.Color.yellow()
         )
 
         embed.add_field(
-            name="Default",
+            name="🔗 Default",
             value="""```
 /help
 
@@ -24,7 +24,7 @@ def hilfe(bot):
         )
 
         embed.add_field(
-            name="information",
+            name="ℹ️ Information",
             value="""```
 soon...
                 ```""",
@@ -32,46 +32,7 @@ soon...
         )
 
         embed.add_field(
-            name="Administrator",
-            value="""```
-/ban
-/kick
-/clear
-/nuke
-                ```""",
-            inline=True
-        )
-
-        await ctx.send(embed=embed)
-
-    @bot.command(
-        name="help")
-    async def arihelp(ctx) -> None:
-        embed = disnake.Embed(
-            title="HERE ARE ALL THE COMMANDS",
-            description="The Golden Cat uses **ari** as a command prefix. **slash** will also work",
-            color=disnake.Color.yellow()
-        )
-
-        embed.add_field(
-            name="Default",
-            value="""```
-/help
-
-                ```""",
-            inline=True
-        )
-
-        embed.add_field(
-            name="information",
-            value="""```
-soon...
-                ```""",
-            inline=True
-        )
-
-        embed.add_field(
-            name="Administrator",
+            name="🔧 Administrator",
             value="""```
 /ban
 /kick

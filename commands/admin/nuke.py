@@ -12,13 +12,11 @@ def nuke(bot):
         description="Clear the channel")
     async def slashnuke(ctx) -> None:
         await ctx.channel.purge()
-        time.sleep(10)
         embed = disnake.Embed(
             title=f"The channel has been nuked.",
             color=disnake.Color.red()
         )
         await ctx.send(embed=embed)
-
 
     @has_administrator_role()
     @bot.command(
