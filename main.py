@@ -23,7 +23,6 @@ bot = commands.Bot(
     help_command=None
 )
 
-
 @bot.event
 async def on_ready():
     print(f"Der Bot ist nun an! | username = {bot.user}")
