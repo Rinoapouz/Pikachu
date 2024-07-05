@@ -25,7 +25,7 @@ bot = commands.Bot(
 
 @bot.event
 async def on_ready():
-    print(f"Bot is running | {bot.user}")
+    print(f"Der Bot ist nun an! | username = {bot.user}")
 
 
 # Commands registrieren
