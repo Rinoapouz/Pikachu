@@ -32,7 +32,7 @@ bot = commands.Bot(
 
 @bot.event
 async def on_ready():
-    print(f"The Bot is working since {now.strftime("%d.%m.%Y %H:%M:%S")} with the {version}")
+    print(f"The Bot is working since {now.strftime("%d.%m.%Y %H:%M:%S")} with {version}")
     print(f"Botname = {bot.user}")
 
 
