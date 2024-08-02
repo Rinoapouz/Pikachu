@@ -1,7 +1,7 @@
-import datetime
-
-now = datetime.datetime.now()
+# Version des Bots
 version = "v1.0.0"
+
+# Bot token 
 token = "MTE3NTAwNTgyODc5Nzk2ODQwNQ.GTXkVh.34N-dTa3pbTzZd__qStYTYHhPvPZ7xJQNBQpy8"
 
 # Import für USER Commands
@@ -33,8 +33,7 @@ bot = commands.Bot(
 
 @bot.event
 async def on_ready():
-    print(f"The Bot is working since {now.strftime("%d.%m.%Y %H:%M:%S")} with {version}")
-    print(f"Botname = {bot.user}")
+    print(f"Bot working on = {bot.user}")
 
 
 # Commands registrieren
@@ -45,4 +44,5 @@ for command in admin_commands:
 for command in addons:
     command(bot)
 
+# Startet den Bot
 bot.run(token)
