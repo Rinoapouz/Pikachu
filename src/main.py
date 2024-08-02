@@ -35,7 +35,7 @@ bot = commands.Bot(
 # When the Bot is ready it should say "Bot working on = Botusername"
 @bot.event
 async def on_ready():
-    print(f"Bot working on = {bot.user}")
+    print(f"The Bot is working")
 
 # Register all commands
 for command in user_commands:
@@ -49,6 +49,7 @@ for addon in addons:
 dotenv_path = find_dotenv('Zoken.env')
 print(f".env file found: {dotenv_path}")
 load_dotenv(dotenv_path)
+
 
 # Load the Discord Bot Token and start the bot
 token = os.getenv('DISCORD_TOKEN')
