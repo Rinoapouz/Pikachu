@@ -14,8 +14,9 @@
 
 ## <img src="https://cdn.discordapp.com/emojis/852881450667081728.gif" width="20px" height="20px">》Features
 - [x] Moderation
+- [x] automod 
 - [x] Level System
-- [x] Birthday System
+- [x] Birthday System 
 
 ## <img src="https://cdn.discordapp.com/emojis/1036083490292244493.png" width="15px" height="15px"> 》Support Server
 [Support Server](https://discord.gg/XgMhS9tADv) - Discord-Bot's Support Server Invite
