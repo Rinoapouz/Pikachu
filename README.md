@@ -3,7 +3,6 @@
   <h3 align="center">Golden Cat</h3>
 
   <p align="center">
-    Golden Cat is an updated version of <a href="https://github.com/DotwoodMedia/Dbot">Dbot</a>, Unfortunately the owners stopped at the peak and decided to put the source online of which I made an updated version.
     <br />
     <br />
     <a href="https://github.com/rinoapouz/Pikachu/issues">Report Bug</a>
