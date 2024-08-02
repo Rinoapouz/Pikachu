@@ -131,6 +131,8 @@ GoldenCat.sqlite
 
 # Environments
 .env
+D:\VS Projects\Pikachu\Zoken.env
+Zoken.env
 .venv
 env/
 venv/
