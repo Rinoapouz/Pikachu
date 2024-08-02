@@ -7,6 +7,7 @@ token = "MTE3NTAwNTgyODc5Nzk2ODQwNQ.GTXkVh.34N-dTa3pbTzZd__qStYTYHhPvPZ7xJQNBQpy
 # Import für USER Commands
 from commands.help import *
 from commands.level import *
+from commands.birthday import *
 # Import für ADMIN Commands
 from commands.admin.ban import *
 from commands.admin.clear import *
@@ -17,7 +18,7 @@ from addons.Levelsystem.levelsystem import *
 
 # Liste der commands
 admin_commands = [ban, clear, kick, nuke]
-user_commands = [hilfe, level]
+user_commands = [hilfe, level, birthday]
 # Liste der Addons
 addons = [Leveling]
 
