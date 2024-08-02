@@ -5,7 +5,7 @@ from disnake.ext import commands
 administrator_role = ['Admin', 'Moderator']  # Ersetzen Name oder IDs
 
 
-# Überprüfen, ob der Benutzer einer der zulässigen Rollen hat
+# Check if the user has one of the permitted rolesdef has_administrator_role(): 
 def has_administrator_role():
     async def predicate(ctx):
         return any(
