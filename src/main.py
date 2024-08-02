@@ -1,28 +1,33 @@
-# Import extern Libarys
 import os
 from dotenv import load_dotenv, find_dotenv
+import disnake
+from disnake.ext import commands
 
 # Import all user commands
 from commands.help import *
 from commands.level import *
+
 # Import all admin commands
 from commands.admin.ban import *
 from commands.admin.clear import *
 from commands.admin.kick import *
 from commands.admin.nuke import *
+
 # Import Addons
 from addons.Levelsystem.levelsystem import *
+from addons.automod.automod import *
 
-# Liste der commands
+# List of commands
 admin_commands = [ban, clear, kick, nuke]
 user_commands = [hilfe, level]
-# Liste der Addons
-addons = [Leveling]
+# List of Addons
+addons = [Leveling, automod]
 
 # Bot Settings
+intents = disnake.Intents.all()
 bot = commands.Bot(
     command_prefix="ari",
-    intents=disnake.Intents.all(),
+    intents=intents,
     help_command=None,
     activity=disnake.Game(name="/help")
 )
@@ -32,22 +37,19 @@ bot = commands.Bot(
 async def on_ready():
     print(f"Bot working on = {bot.user}")
 
-
 # Register all commands
 for command in user_commands:
     command(bot)
 for command in admin_commands:
     command(bot)
-for command in addons:
-    command(bot)
-
+for addon in addons:
+    addon(bot)
 
 # Find and load the .env file with the Discord Token
 dotenv_path = find_dotenv('Zoken.env')
 print(f".env file found: {dotenv_path}")
 load_dotenv(dotenv_path)
 
-# load the Discord Bot Token Start the bot
-load_dotenv()
+# Load the Discord Bot Token and start the bot
 token = os.getenv('DISCORD_TOKEN')
 bot.run(token)
